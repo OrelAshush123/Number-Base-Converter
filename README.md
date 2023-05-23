@@ -15,7 +15,7 @@
     <li>Follow the on-screen instructions to enter the number, the base to convert from (FromB), and the base to convert to (ToB).</li>
     <li>The script will perform the conversion and display the result.</li>
   </ol>
-     <h3><a href="Number-Base-Converter#here-is-input-output-example">input-output-example</a></h3>
+     <h3><a href="#here-is-input-output-example">input-output-example</a></h3>
 
   <h2>Functionality</h2>
   <ul>
