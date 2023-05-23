@@ -37,9 +37,9 @@
   </ul>
   <h3 id="input-output example (how to use)">input-output example (how to use)</h3>
 <code>Enter a num: 1010 
-From B-> 2 
-To B-> 10 
-(1010)2 = (10)10</code>
+ From B-> 2 
+ To B-> 10 
+ (1010)2 = (10)10</code>
   
   
 
