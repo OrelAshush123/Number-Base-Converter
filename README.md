@@ -15,7 +15,7 @@
     <li>Follow the on-screen instructions to enter the number, the base to convert from (FromB), and the base to convert to (ToB).</li>
     <li>The script will perform the conversion and display the result.</li>
   </ol>
-     <h3><a href="https://github.com/OrelAshush123/Number-Base-Converter#here-is-input-output-example">input-output-example</a></h3>
+     <h3><a href="#input-output example (how to use)">input-output-example</a></h3>
 
   <h2>Functionality</h2>
   <ul>
@@ -35,7 +35,7 @@
     <li>Convert a number from base 16 to base 8: <code>2A<sub>16</sub> = 52<sub>8</sub></code></li>
     <li>Convert a number from base 8 to base 5: <code>123<sub>8</sub> = 443<sub>5</sub></code></li>
   </ul>
-  <h3>input-output example (how to use)</h3>
+  <h3 id="input-output example (how to use)">input-output example (how to use)</h3>
 <code>Enter a num: 1010 
 From B-> 2 
 To B-> 10 
