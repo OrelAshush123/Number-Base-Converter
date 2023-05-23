@@ -34,6 +34,18 @@
     <li>Convert a number from base 16 to base 8: <code>2A<sub>16</sub> = 52<sub>8</sub></code></li>
     <li>Convert a number from base 8 to base 5: <code>123<sub>8</sub> = 443<sub>5</sub></code></li>
   </ul>
+  
+  <code>
+  Enter a num: 1010 \n
+  From B-> 2 \n
+  To B-> 10 \n
+  (1010)2 = (10)10 \n
+  </code>
+  
+  
+
+  
+  
 
   <h2>Notes</h2>
   <ul>
