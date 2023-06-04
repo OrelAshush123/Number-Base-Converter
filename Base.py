@@ -1,4 +1,4 @@
-﻿def make_int(char):  
+def convert_char_to_num(char):  
     """
     This function converts a character 'A' to 'F' to its corresponding 
     integer value from 10 to 15. Otherwise, it returns False.
@@ -12,20 +12,20 @@
     
     else: return False
 
-def make_num(char):
+def convert_num_to_char(num):
     """
     This function converts an integer value from 10 to 15 to 
     its corresponding character 'A' to 'F'. Otherwise, it returns False.
     """
-    if char == 10: return 'A'
-    elif char == 11: return 'B'
-    elif char == 12: return 'C'
-    elif char == 13: return 'D'
-    elif char == 14: return 'E'
-    elif char == 15: return 'F'
+    if num == 10: return 'A'
+    elif num == 11: return 'B'
+    elif num == 12: return 'C'
+    elif num == 13: return 'D'
+    elif num == 14: return 'E'
+    elif num == 15: return 'F'
     
     else: return False
-def if_Friend(Fb,Tb): # (from base)-"Fb" (to bace)-"Tb"
+def if_Friend(Fb,Tb): # (from base)-"Fb" (to base)-"Tb"
     """
     This function checks if two bases, Fb and Tb, are "friends." 
     Two bases are considered friends if one can be 
@@ -42,7 +42,7 @@ def if_Friend(Fb,Tb): # (from base)-"Fb" (to bace)-"Tb"
             
     return False
 
-def This_regal(num,B):
+def This_legal(num,B):
     """
     This function checks if a given number 'num' is valid in a given base 'B'.
     It ensures that all the characters in the number are within the valid range of the base.
@@ -58,19 +58,19 @@ def This_regal(num,B):
     except:
         return False
     
-################## From B_ To B 10  #######################
+################## From B_ To B10  #######################
 
 def __inner_To_B10(listC,Fb,start,stop):
     """
     This is a helper function for converting a number from base Fb to base 10.
     It performs the conversion using the positional notation and returns the result.
     """
-    anser = 0
+    answer = 0
     n = 0
     for i in range(start, stop, -1):
-        anser += listC[n]*Fb**i
+        answer += listC[n]*Fb**i
         n += 1
-    return anser
+    return answer
 
 def To_B10(num, Fb, Tb):
     """
@@ -84,9 +84,9 @@ def To_B10(num, Fb, Tb):
             num = num[(len(CharOfNum)+1):]
             break 
         try:
-            CharOfNum.append(int(i)) # if there is a dijit that is above 10 (A-F), it will throw an error.
+            CharOfNum.append(int(i)) # if there is a digit that is above 10 (A-F), it will throw an error.
         except:  
-            CharOfNum.append(make_int(i)) # and the func "make_int" will be activated. 
+            CharOfNum.append(convert_char_to_num(i)) # and the func "convert_char_to_num" will be activated. 
     else:   
         return __inner_To_B10(CharOfNum, Fb, len(CharOfNum)-1, -1) # 
     
@@ -95,24 +95,24 @@ def To_B10(num, Fb, Tb):
         try:
             CharOfNumOverdot.append(int(i))
         except:
-            CharOfNumOverdot.append(make_int(i))
+            CharOfNumOverdot.append(convert_char_to_num(i))
     
     return __inner_To_B10(CharOfNum,Fb, len(CharOfNum)-1, -1) + __inner_To_B10(CharOfNumOverdot,Fb, -1, (len(CharOfNumOverdot)+1)*-1)
 
-########################## From B 10 To B_  #######################
+########################## From B10 To B_  #######################
 def __inner_From_B10(listC):
     """
     This is a helper function for converting a number from base 10 to another base. 
     It converts the individual digits to their corresponding characters if they are greater than 9.
     """
-    anser = ""
+    answer = ""
     for i in listC:
         if i > 9 and i < 16:
-            anser += make_num(i)
+            answer += convert_num_to_char(num)
         else:
-            anser += str(i)
+            answer += str(i)
          
-    return anser
+    return answer
     
 def From_B10(numS, Fb, Tb):
     """
@@ -182,7 +182,7 @@ def main():
     ToB = int(input("To B->"))
     
     if FromB is ToB: return False
-    if not This_regal(num, FromB):
+    if not This_legal(num, FromB):
         return False
              
     if ToB == 10:   
@@ -208,7 +208,7 @@ if __name__ == "__main__":
     while True:
         m = main() 
         if m is not False: print(m)
-        else: print("This not regal")
+        else: print("illegal number")
 
 """
 Overall, the code provides a way to convert numbers between different bases, 
